@@ -164,7 +164,8 @@
 	    		<Image condition="contains">C:\Windows\WinSxS\amd64</Image>
 	    		<Image condition="contains">C:\Windows\servicing\TrustedInstaller.exe</Image>
 	    		<Image condition="contains">C:\Program Files\rempl\remsh.exe</Image> <!-- Windows Remediation Performance Logging, has something to do with Sysmon event filtering</!-->
-    		</ProcessCreate>
+    			<Image condition="contains">C:\Program Files (x86)\Common Files\Apple\Mobile Device Support\</Image>
+		</ProcessCreate>
 
 	<!--SYSMON EVENT ID 2 : FILE CREATION TIME RETROACTIVELY CHANGED IN THE FILESYSTEM-->
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, TargetFilename, CreationUtcTime, PreviousCreationUtcTime-->
