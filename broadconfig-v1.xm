@@ -145,26 +145,26 @@
 			<ParentImage condition="end with">C:\Program Files (x86)\Dropbox\Update\DropboxUpdate.exe</ParentImage>
 			<!--SECTION: Dell-->
 			<ParentImage condition="image">C:\Program Files (x86)\Dell\CommandUpdate\InvColPC.exe</ParentImage> <!--Dell:CommandUpdate: Detection process-->
-		  <!--SECTION: Blackie10-->
-      <Image condition="end with">Everything\Everything.exe</Image>
-	    <Image condition="end with">Lookeen\LookeenFileParser.Exe</Image>
-	    <Image condition="contains">slack\app-2.9.0\slack.exe</Image>
-	    <Image condition="contains">Program Files (x86)\NVIDIA Corporation</Image>
-	    <Image condition="contains">Program Files\NVIDIA Corporation</Image>
-	    <Image condition="contains">Windows\System32\sppsvc.exe</Image>
-	    <Image condition="contains">Sysmon\Sysmon.exe</Image>
-	    <Image condition="contains">Windows\System32\XblGameSaveTask.exe</Image>
-	    <Image condition="contains">Windows\System32\msfeedssync.exe</Image>
-	    <Image condition="contains">Program Files\Internet Explorer\ielowutil.exe</Image>
-	    <Image condition="contains">Windows\System32\msfeedssync.exe</Image>
-	    <Image condition="contains">C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARM.exe</Image>
-	    <Image condition="contains">C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe</Image>
-	    <Image condition="contains">C:\Windows\System32\SystemSettingsBroker.exe</Image>
-	    <Image condition="contains">C:\Program Files (x86)\Google\</Image>
-	    <Image condition="contains">C:\Windows\WinSxS\amd64</Image>
-	    <Image condition="contains">C:\Windows\servicing\TrustedInstaller.exe</Image>
-	    <Image condition="contains">C:\Program Files\rempl\remsh.exe</Image> <!-- Windows Remediation Performance Logging, has something to do with Sysmon event filtering</!-->
-    </ProcessCreate>
+		 	<!--SECTION: Blackie10-->
+      			<Image condition="end with">Everything\Everything.exe</Image>
+	    		<Image condition="end with">Lookeen\LookeenFileParser.Exe</Image>
+	    		<Image condition="contains">slack\app-2.9.0\slack.exe</Image>
+	    		<Image condition="contains">Program Files (x86)\NVIDIA Corporation</Image>
+	    		<Image condition="contains">Program Files\NVIDIA Corporation</Image>
+	    		<Image condition="contains">Windows\System32\sppsvc.exe</Image>
+	    		<Image condition="contains">Sysmon\Sysmon.exe</Image>
+	    		<Image condition="contains">Windows\System32\XblGameSaveTask.exe</Image>
+	    		<Image condition="contains">Windows\System32\msfeedssync.exe</Image>
+	    		<Image condition="contains">Program Files\Internet Explorer\ielowutil.exe</Image>
+	    		<Image condition="contains">Windows\System32\msfeedssync.exe</Image>
+	    		<Image condition="contains">C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARM.exe</Image>
+	    		<Image condition="contains">C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe</Image>
+	    		<Image condition="contains">C:\Windows\System32\SystemSettingsBroker.exe</Image>
+	    		<Image condition="contains">C:\Program Files (x86)\Google\</Image>
+	    		<Image condition="contains">C:\Windows\WinSxS\amd64</Image>
+	    		<Image condition="contains">C:\Windows\servicing\TrustedInstaller.exe</Image>
+	    		<Image condition="contains">C:\Program Files\rempl\remsh.exe</Image> <!-- Windows Remediation Performance Logging, has something to do with Sysmon event filtering</!-->
+    		</ProcessCreate>
 
 	<!--SYSMON EVENT ID 2 : FILE CREATION TIME RETROACTIVELY CHANGED IN THE FILESYSTEM-->
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, TargetFilename, CreationUtcTime, PreviousCreationUtcTime-->
@@ -174,8 +174,8 @@
 		<FileCreateTime onmatch="exclude">
 			<Image condition="image">OneDrive.exe</Image> <!--OneDrive constantly changes file times-->
 			<Image condition="contains">setup</Image> <!--Ignore setups-->
-      <!--SECTION: Blackie10-->
-      <Image condition="is">C:\Windows\System32\RuntimeBroker.exe</Image>
+      		<!--SECTION: Blackie10-->
+      		<Image condition="is">C:\Windows\System32\RuntimeBroker.exe</Image>
 			<Image condition="is">c:\windows\system32\svchost.exe</Image>
 			<Image condition="is">C:\WINDOWS\system32\MpSigStub.exe</Image>
 			<Image condition="is">C:\WINDOWS\System32\LogonUI.exe</Image>
@@ -187,7 +187,7 @@
 			<Image condition="is">C:\WINDOWS\system32\msiexec.exe</Image>
 			<Image condition="is">C:\WINDOWS\system32\taskmgr.exe</Image>
 			<Image condition="is">C:\Program Files (x86)\Origin\Origin.exe</Image>
-	  	<Image condition="contains">WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe</Image>
+	  		<Image condition="contains">WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe</Image>
 			<Image condition="contains">WINDOWS\system32\backgroundTaskHost.exe</Image>
 			<Image condition="contains">Mozilla Firefox\firefox.exe</Image>
 			<Image condition="contains">Google\Chrome\Application\chrome.exe</Image>
@@ -265,31 +265,31 @@
 			<DestinationHostname condition="end with">microsoft.com</DestinationHostname> <!--Microsoft:Update delivery-->
 			<DestinationHostname condition="end with">microsoft.com.akadns.net</DestinationHostname> <!--Microsoft:Update delivery-->
 			<DestinationHostname condition="end with">microsoft.com.nsatc.net</DestinationHostname> <!--Microsoft:Update delivery-->
-      <!--SECTION: Blackie10-->
-      <Image condition="end with">AppData\Roaming\Dropbox\bin\Dropbox.exe</Image> <!--Dropbox-->
-		  <Image condition="image">OneDriveStandaloneUpdater.exe</Image> <!--Microsoft:OneDrive-->
-		  <Image condition="contains">chrome.exe</Image>
-	    <Image condition="contains">iexplore.exe</Image>
-	    <Image condition="contains">firefox.exe</Image>
-	    <Image condition="contains">outlook.exe</Image>
-	    <Image condition="contains">Skype.exe</Image>
-	    <Image condition="contains">lync.exe</Image>
-	    <Image condition="contains">GoogleUpdate.exe</Image>
-		  <Image condition="contains">qbittorrent.exe</Image>
-		  <Image condition="contains">OfficeClickToRun.exe</Image>
-		  <Image condition="contains">Windows\SystemApps\Microsoft.Windows.Cortana</Image>	  
-		  <Image condition="contains">OneDrive.exe</Image>	  
-		  <Image condition="contains">Windows\System32\svchost.exe</Image>	
-		  <Image condition="contains">System32\backgroundTaskHost.exe</Image>
-		  <Image condition="contains">Skype\Browser\SkypeBrowserHost.exe</Image>
-		  <Image condition="contains">Free Download Manager\fdm.exe</Image>
-		  <Image condition="contains">slack\app-2.9.0\slack.exe</Image>
-		  <Image condition="contains">C:\Program Files (x86)\Origin</Image>
-		  <Image condition="contains">C:\Program Files (x86)\NVIDIA Corporation</Image>
-      <DestinationIp condition="begin with">172.</DestinationIp>
-		  <DestinationIp condition="begin with">10.</DestinationIp>
-		  <DestinationIp condition="begin with">192.</DestinationIp>
-		  <DestinationIp condition="is">0.0.0.0</DestinationIp>
+      			<!--SECTION: Blackie10-->
+      			<Image condition="end with">AppData\Roaming\Dropbox\bin\Dropbox.exe</Image> <!--Dropbox-->
+		  	<Image condition="image">OneDriveStandaloneUpdater.exe</Image> <!--Microsoft:OneDrive-->
+		  	<Image condition="contains">chrome.exe</Image>
+	    		<Image condition="contains">iexplore.exe</Image>
+	    		<Image condition="contains">firefox.exe</Image>
+	   		<Image condition="contains">outlook.exe</Image>
+	    		<Image condition="contains">Skype.exe</Image>
+	    		<Image condition="contains">lync.exe</Image>
+	    		<Image condition="contains">GoogleUpdate.exe</Image>
+		  	<Image condition="contains">qbittorrent.exe</Image>
+		  	<Image condition="contains">OfficeClickToRun.exe</Image>
+		  	<Image condition="contains">Windows\SystemApps\Microsoft.Windows.Cortana</Image>	  
+		  	<Image condition="contains">OneDrive.exe</Image>	  
+		  	<Image condition="contains">Windows\System32\svchost.exe</Image>	
+		  	<Image condition="contains">System32\backgroundTaskHost.exe</Image>
+		  	<Image condition="contains">Skype\Browser\SkypeBrowserHost.exe</Image>
+		  	<Image condition="contains">Free Download Manager\fdm.exe</Image>
+		  	<Image condition="contains">slack\app-2.9.0\slack.exe</Image>
+		  	<Image condition="contains">C:\Program Files (x86)\Origin</Image>
+		  	<Image condition="contains">C:\Program Files (x86)\NVIDIA Corporation</Image>
+      			<DestinationIp condition="begin with">172.</DestinationIp>
+		  	<DestinationIp condition="begin with">10.</DestinationIp>
+		  	<DestinationIp condition="begin with">192.</DestinationIp>
+		  	<DestinationIp condition="is">0.0.0.0</DestinationIp>
 		</NetworkConnect>
 
 	<!--SYSMON EVENT ID 4 : RESERVED FOR SYSMON STATUS MESSAGES, THIS LINE IS INCLUDED FOR DOCUMENTATION PURPOSES ONLY-->
@@ -311,24 +311,24 @@
 			<Signature condition="contains">microsoft</Signature> <!--Exclude signed Microsoft drivers-->
 			<Signature condition="contains">windows</Signature> <!--Exclude signed Microsoft drivers-->
 			<Signature condition="begin with">Intel </Signature> <!--Exclude signed Intel drivers-->
-      <Signature condition="is">Microsoft Windows</Signature>		
-	    <Signature condition="is">Microsoft Corporation</Signature>	
-	    <Signature condition="is">NVIDIA Corporation</Signature>	
+      			<Signature condition="is">Microsoft Windows</Signature>		
+	    		<Signature condition="is">Microsoft Corporation</Signature>	
+	    		<Signature condition="is">NVIDIA Corporation</Signature>	
 		</DriverLoad>
 
 	<!--SYSMON EVENT ID 7 : DLL (IMAGE) LOADED BY PROCESS-->
 		<!--DATA: UtcTime, ProcessGuid, ProcessId, Image, ImageLoaded, Hashes, Signed, Signature, SignatureStatus-->
 		<ImageLoad onmatch="include">
-    <Signed condition="is">False</Signed>
+    			<Signed condition="is">False</Signed>
 		<!--COMMENT:	Can cause high system load, disabled by default, important examples included below.-->
 		</ImageLoad>
-	  <ImageLoad onmatch="exclude">
-	    <ImageLoaded condition="contains">C:\Windows\assembly\NativeImages</ImageLoaded>
-	    <ImageLoaded condition="contains">Axonic\Lookeen\LookeenFileParser.exe</ImageLoaded>
-	    <ImageLoaded condition="contains">slack\app-2.9.0</ImageLoaded>
-	    <ImageLoaded condition="contains">Program Files\WindowsApps\Microsoft</ImageLoaded>
-	    <ImageLoaded condition="contains">C:\Program Files (x86)\CorsairLink4</ImageLoaded>
-	  </ImageLoad>
+	  	<ImageLoad onmatch="exclude">
+	   		<ImageLoaded condition="contains">C:\Windows\assembly\NativeImages</ImageLoaded>
+	    		<ImageLoaded condition="contains">Axonic\Lookeen\LookeenFileParser.exe</ImageLoaded>
+	    		<ImageLoaded condition="contains">slack\app-2.9.0</ImageLoaded>
+	    		<ImageLoaded condition="contains">Program Files\WindowsApps\Microsoft</ImageLoaded>
+	    		<ImageLoaded condition="contains">C:\Program Files (x86)\CorsairLink4</ImageLoaded>
+	  	</ImageLoad>
     
 	<!--SYSMON EVENT ID 8 : REMOTE THREAD CREATED-->
 		<!--DATA: UtcTime, SourceProcessGuid, SourceProcessId, SourceImage, TargetProcessId, TargetImage, NewThreadId, StartAddress, StartModule, StartFunction-->
@@ -354,8 +354,8 @@
 				Encourage you to experiment with this feature yourself.-->
 		<!--COMMENT:	You will likely want to set this to a full capture on domain controllers, where no process should be doing raw reads.-->
 		</RawAccessRead>
-    <!--SECTION: Blackie10-->
-	<RawAccessRead onmatch="exclude">
+    		<!--SECTION: Blackie10-->
+		<RawAccessRead onmatch="exclude">
 		  <Image condition="is">System</Image>
 		  <Image condition="is">C:\Windows\CCM\CcmExec.exe</Image>
 		  <Image condition="is">C:\Windows\System32\svchost.exe</Image>
@@ -376,7 +376,7 @@
 		  <Image condition="is">C:\Windows\explorer.exe</Image>
 		  <Image condition="is">C:\Windows\System32\DiskSnapshot.exe</Image>
 		  <Image condition="is">C:\Program Files\Intel\Intel(R) Rapid Storage Technology\IAStorDataMgrSvc.exe</Image>
-	</RawAccessRead>
+		</RawAccessRead>
 
 	<!--SYSMON EVENT ID 10 : INTER-PROCESS ACCESS-->
 		<!--DATA: UtcTime, SourceProcessGuid, SourceProcessId, SourceThreadId, SourceImage, TargetProcessGuid, TargetProcessId, TargetImage, GrantedAccess, CallTrace-->
@@ -396,25 +396,25 @@
 			<GrantedAccess condition="is">0x1000</GrantedAccess>
 			<SourceImage condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</SourceImage>
 			<!--SECTION: Blackie10-->
-      <SourceImage condition="is">c:\windows\system32\svchost.exe</SourceImage>
-      <SourceImage condition="is">C:\WINDOWS\system32\wbem\wmiprvse.exe</SourceImage>
-      <SourceImage condition="is">C:\WINDOWS\System32\perfmon.exe</SourceImage>
-      <SourceImage condition="is">C:\WINDOWS\system32\LogonUI.exe</SourceImage>
-      <SourceImage condition="is">C:\WINDOWS\system32\MRT.exe</SourceImage>
-      <SourceImage condition="is">C:\Windows\System32\MsiExec.exe</SourceImage>
-      <SourceImage condition="is">C:\windows\CCM\CcmExec.exe</SourceImage>
-      <SourceImage condition="is">C:\WINDOWS\system32\taskmgr.exe</SourceImage>
-      <SourceImage condition="is">C:\WINDOWS\system32\lsass.exe</SourceImage>
-      <SourceImage condition="is">C:\WINDOWS\system32\services.exe</SourceImage>
-      <SourceImage condition="is">C:\WINDOWS\system32\wininit.exe</SourceImage>
-      <SourceImage condition="is">C:\WINDOWS\system32\csrss.exe</SourceImage>
-      <SourceImage condition="is">C:\WINDOWS\System32\smss.exe</SourceImage>
-      <SourceImage condition="is">C:\Program Files\Windows Defender Advanced Threat Protection\MsSense.exe</SourceImage>
-      <SourceImage condition="is">C:\Windows\syswow64\MsiExec.exe</SourceImage>
-      <SourceImage condition="is">C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARMHelper.exe</SourceImage>
-      <SourceImage condition="contains">Program Files\Windows Defender\MsMpEng.exe</SourceImage>
-      <SourceImage condition="contains">VMware\VMware Workstation\vmware-authd.exe</SourceImage>
-      <SourceImage condition="contains">Program Files (x86)\Google\Update</SourceImage>
+      			<SourceImage condition="is">c:\windows\system32\svchost.exe</SourceImage>
+      			<SourceImage condition="is">C:\WINDOWS\system32\wbem\wmiprvse.exe</SourceImage>
+      			<SourceImage condition="is">C:\WINDOWS\System32\perfmon.exe</SourceImage>
+      			<SourceImage condition="is">C:\WINDOWS\system32\LogonUI.exe</SourceImage>
+      			<SourceImage condition="is">C:\WINDOWS\system32\MRT.exe</SourceImage>
+      			<SourceImage condition="is">C:\Windows\System32\MsiExec.exe</SourceImage>
+      			<SourceImage condition="is">C:\windows\CCM\CcmExec.exe</SourceImage>
+      			<SourceImage condition="is">C:\WINDOWS\system32\taskmgr.exe</SourceImage>
+      			<SourceImage condition="is">C:\WINDOWS\system32\lsass.exe</SourceImage>
+      			<SourceImage condition="is">C:\WINDOWS\system32\services.exe</SourceImage>
+      			<SourceImage condition="is">C:\WINDOWS\system32\wininit.exe</SourceImage>
+      			<SourceImage condition="is">C:\WINDOWS\system32\csrss.exe</SourceImage>
+      			<SourceImage condition="is">C:\WINDOWS\System32\smss.exe</SourceImage>
+      			<SourceImage condition="is">C:\Program Files\Windows Defender Advanced Threat Protection\MsSense.exe</SourceImage>
+      			<SourceImage condition="is">C:\Windows\syswow64\MsiExec.exe</SourceImage>
+      			<SourceImage condition="is">C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARMHelper.exe</SourceImage>
+      			<SourceImage condition="contains">Program Files\Windows Defender\MsMpEng.exe</SourceImage>
+      			<SourceImage condition="contains">VMware\VMware Workstation\vmware-authd.exe</SourceImage>
+      			<SourceImage condition="contains">Program Files (x86)\Google\Update</SourceImage>
 		</ProcessAccess>
 
 
@@ -498,10 +498,10 @@
 			<TargetObject condition="begin with">\REGISTRY\MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Drivers32</TargetObject> <!--Microsoft:Windows: Legacy driver loading | Credit @ion-storm -->
 			<TargetObject condition="begin with">\REGISTRY\MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\BootExecute</TargetObject> <!--Microsoft:Windows: Autorun | Credit @ion-storm | [ https://www.cylance.com/windows-registry-persistence-part-2-the-run-keys-and-search-order ] -->
 			<!-- AppInit DLLs -->
-		  <TargetObject condition="contains">Software\Microsoft\Windows NT\CurrentVersion\Windows\AppInit_DLLs</TargetObject>
-      <!-- Known DLLs -->
-		  <TargetObject condition="contains">SYSTEM\CurrentControlSet\Control\Session Manager\KnownDLLs</TargetObject>
-      <!--CLSID launch commands and file association changes-->
+		  	<TargetObject condition="contains">Software\Microsoft\Windows NT\CurrentVersion\Windows\AppInit_DLLs</TargetObject>
+      			<!-- Known DLLs -->
+		  	<TargetObject condition="contains">SYSTEM\CurrentControlSet\Control\Session Manager\KnownDLLs</TargetObject>
+      			<!--CLSID launch commands and file association changes-->
 			<TargetObject condition="contains">\Explorer\FileExts\</TargetObject> <!--Microsoft:Windows: Changes to file extension mapping-->
 			<TargetObject condition="contains">\shell\install\command\</TargetObject> <!--Microsoft:Windows: Sensitive subkey under file associations and CLSID that map to launch command-->
 			<TargetObject condition="contains">\shell\open\command\</TargetObject> <!--Microsoft:Windows: Sensitive subkey under file associations and CLSID that map to launch command-->
@@ -585,13 +585,13 @@
 			<TargetObject condition="begin with">\REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Custom</TargetObject> <!-- Custom SHIM:FireEye FIN7 report - https://www.fireeye.com/blog/threat-research/2017/05/fin7-shim-databases-persistence.html -->
 			<TargetObject condition="begin with">\REGISTRY\MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\InstalledSDB</TargetObject> <!-- Custom SHIM:FireEye FIN7 report - https://www.fireeye.com/blog/threat-research/2017/05/fin7-shim-databases-persistence.html -->
 			<TargetObject condition="begin with">\REGISTRY\MACHINE\SYSTEM\CurrentControlSet\services\DNS\Parameters\</TargetObject> <!--Microsoft:Windows:DNS: ServerLevelPluginDll Issue https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83 -->
-		  <!-- Active Setup/StubPath  -->
-		  <TargetObject condition="contains">Microsoft\Active Setup\Installed Components</TargetObject>
-      <!-- Old Scheduled Tasks XP, NT, 2K  -->
-		  <TargetObject condition="contains">Microsoft\Windows\CurrentVersion\Explorer\SharedTaskScheduler</TargetObject> 
-		  <!-- Scheduled Tasks Win 10 -->
-		  <TargetObject condition="contains">Microsoft\Windows\Windows NT\CurrentVersion\Schedule\Taskcache</TargetObject> 
-    </RegistryEvent>
+		  	<!-- Active Setup/StubPath  -->
+		 	<TargetObject condition="contains">Microsoft\Active Setup\Installed Components</TargetObject>
+      			<!-- Old Scheduled Tasks XP, NT, 2K  -->
+		  	<TargetObject condition="contains">Microsoft\Windows\CurrentVersion\Explorer\SharedTaskScheduler</TargetObject> 
+		  	<!-- Scheduled Tasks Win 10 -->
+		  	<TargetObject condition="contains">Microsoft\Windows\Windows NT\CurrentVersion\Schedule\Taskcache</TargetObject> 
+    		</RegistryEvent>
 		<RegistryEvent onmatch="exclude">
 		<!--COMMENT:	Remove low-information noise-->
 			<!--SECTION: Microsoft binaries-->
